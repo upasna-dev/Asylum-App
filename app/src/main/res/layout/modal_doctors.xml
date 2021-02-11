@@ -1,0 +1,90 @@
+<androidx.cardview.widget.CardView
+    android:layout_weight="1"
+    android:layout_margin="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp"
+    app:contentPadding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/LinearDocClick"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="130dp"
+            android:id="@+id/docIcon"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:src="@drawable/doc"/>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/docName"
+                    android:textSize="16dp"
+                    android:textColor="#1E88E5"
+                    android:text="The Greener Slides   "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/docSpec"
+                    android:textSize="10dp"
+                    android:text="Skin Specialist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:textSize="10dp"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/location_icon"
+                android:id="@+id/docAddress"
+                android:text="Dishant Hospital, Ring Road, Nagpur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/appClick"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ap_icon" />
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,60 @@
+package com.traidev.asylum;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SinginActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signup_activity);
+
+        final EditText name_field=(EditText)findViewById(R.id.Name);
+        final EditText email_field=(EditText)findViewById(R.id.Email);
+        final EditText password_field=(EditText)findViewById(R.id.Password);
+        final EditText confirm_password_field=(EditText)findViewById(R.id.confirm_password);
+        Button registerbutton=(Button)findViewById(R.id.register);
+        registerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name=name_field.getText().toString();
+                String email_id=email_field.getText().toString();
+                String password_1=password_field.getText().toString();
+                String password_2=confirm_password_field.getText().toString();
+                if(password_1.equals(password_2))
+                {
+                    //your code to register the user like an entry in the database
+                    SharedPreferences sharedPreferences=getSharedPreferences("USER_CREDENTIALS",MODE_PRIVATE);
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    editor.putString("NAME",name);
+                    editor.putString("EMAIL",email_id);
+                    editor.putString("PASSWORD",password_1);
+                    editor.putBoolean("ISLOGGEDIN",true);
+                    editor.commit();
+                    startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                }
+                else
+                {
+                    Toast.makeText(SinginActivity.this,"Passwords don't match",Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+
+
+    }
+
+
+
+    public void openLogin(View view) {
+        startActivity(new Intent(this,LoginActivity.class));
+    }
+}

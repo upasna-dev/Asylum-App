@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:drawablePadding="10dp"
+        android:background="#333"
+        android:text="Appointment Form"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:background="#FAFAFA"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:drawableLeft="@drawable/hospital"
+            android:layout_marginHorizontal="15dp"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:id="@+id/hospitalTitle"
+            android:drawablePadding="10dp"
+            android:text="Lilawati Rainobow Hospital "
+            android:textColor="#676767"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/bName"
+            android:maxLines="1"
+            android:minLines="1"
+            android:layout_marginHorizontal="15dp"
+            android:hint="Patient Name"
+            android:paddingBottom="12dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:id="@+id/bMobile"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:layout_marginHorizontal="15dp"
+            android:hint="Patient Mobile"
+            android:paddingBottom="12dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:id="@+id/bProblem"
+            android:lines="3"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:hint="Problem"
+            android:paddingBottom="12dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="40dp"
+            android:text="Pick a Date"
+            android:textColor="#9C9C9C"
+            android:textSize="17dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="40dp"
+            android:id="@+id/dateText"
+            android:drawableRight="@drawable/ic_mode_edit_black_24dp"
+            android:text="26/08 "
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressHos"
+            android:visibility="gone"
+            android:layout_marginTop="59dp"
+            android:layout_marginHorizontal="100dp"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="12"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:paddingVertical="7dp"
+            android:id="@+id/bookBtnClick"
+            android:background="#1382E3"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:text="Book Appoinetment"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:text="Instant Discus "/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

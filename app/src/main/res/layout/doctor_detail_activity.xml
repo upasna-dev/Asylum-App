@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/showBeforeLoadFrame"
+        android:elevation="4dp"
+        android:visibility="gone"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_weight="1"
+            android:elevation="4dp"
+            android:src="@drawable/loading"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/updateImgProgress"/>
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:elevation="4dp">
+
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:weightSum="2"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/en"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:layout_gravity="right"
+                android:background="@drawable/btn_bg_blue"
+                android:text="Book Appointment "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backClick"
+            android:src="@drawable/backbutton"
+            android:layout_width="60dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingBottom="200dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginVertical="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/doc"
+                    android:id="@+id/profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@id/profile"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/profile">
+                <TextView
+                    android:textSize="20dp"
+                    android:id="@+id/dName"
+                    android:textStyle="bold"
+                    android:text="Dr. Ashok Dubey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textSize="15dp"
+                        android:id="@+id/dDegree"
+                        android:text="MBBS, MR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/dSpec"
+                android:fontFamily="sans-serif"
+                android:text="Gurda Specialist"
+                android:textColor="#636363"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/dRating"
+                android:textColor="#00A6CB"
+                android:drawablePadding="5dp"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/startrating"
+                android:fontFamily="sans-serif"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:layout_weight="1"
+                android:text="3.5"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="34dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/loc"
+            android:fontFamily="sans-serif"
+            android:id="@+id/dAddress"
+            android:text="Dishant Hospital, Ring road, Agra"
+            android:textColor="#5E5E5E"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+
+         <LinearLayout
+        android:layout_marginTop="35dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif"
+            android:text="About "
+            android:textColor="#4A4A4A"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/dAbout"
+            android:text="The premier multispecialty tertiary care hospital of India has been acknowledged globally as centre of medical excellence. The kind of confidence, trust it has."/>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
